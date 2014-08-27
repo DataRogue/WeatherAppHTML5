@@ -1,0 +1,92 @@
+body
+{
+color: white;
+text-shadow:0px 1px 1px #000000;
+background-color: black;
+font-family:"Verdana", Times, Sans-serif;
+}
+ul {list-style-type:none}
+
+#time
+{
+  position: absolute;
+  top:0pt;
+  left:0pt;
+  float: left;
+  background-color: #64c212;
+  width: 48%;
+  height: 46%;
+  margin: 1%;
+  overflow:auto;
+  border:ridge 0.01em #A6CC84;
+}
+#weather
+{
+  position: absolute;
+  top:0pt;
+  left: 49%;      
+  margin: 1%;
+  float: right;
+  background-color: #debb01;
+  width: 48%;
+  height: 46%;
+  padding-left: 1%;
+  overflow:auto;
+  border:ridge 0.01em #E3DDB3;
+}
+#news
+{
+  position: absolute;
+  left: 32%;
+  top:48%;
+  margin: 1%;
+  background-color: #ee7727;
+  width: 64%;
+  height: 48%;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align:center;
+  overflow:auto;
+  border:ridge 0.01em #F1CFB9;
+}
+#history
+{
+  position: absolute;
+  top: 48%;
+  margin: 1%;
+  background-color: #02bee4;
+  width: 29%;
+  height: 48%;
+  overflow:auto;
+  padding-left: 1%;
+  padding-right: 1%;
+  text-align:center;
+  overflow:auto;
+  border:ridge 0.01em #88D8E8;
+
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li:active {
+
+}
+
+#history ul li:nth-child(odd)
+{ 
+  background-color: #49DFFD;
+}
+
+
+li:nth-child(odd)
+{ 
+  background-color: #F4AB7B;
+}
+
+a:link {color:#FFFFFF;
+  text-decoration:none;}
+a:visited {color: #B2510F;}
+a:active {background-color: #F2BC9A};

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Author's Note:
+
+Holy crap, this has been a trying project. Going from a completely strict programming environment,
+to no compiler, no syntax check, and no debugger, was quite challenging. Especially with the outdated
+YQL documentaion. Regardless, I ended up making this app the best that I could and demonstrated several
+different methods to accomplish each individual task. Also, I was only able to debug this my browser
+so while everything works in theory, I have no actual way to testing: changes in geolocation and actual mobile display.
+
+Also I made a bunch of vector graphics to use with the weather function, but dynamically resizing them has been a bit of a
+pain I honestly don't feel like debugging it until I get familiar with that new Windows Web IDE. 
+
+Overall this app does the following in no particular order:
+Loads recent locations
+Gets weather
+Gets news
+Gets time
+Gets location
+Error checks
+Has several degrees of accuracy
+Changes the amount of content displayed based on orientation
+Looks pretty with Microsoft approved pallete. 
+Has a responsive design
+Likes to randomly fail it's geolocation calls on certain machines for absolutely no good reason, but work perfectly fine on others.
+ -->
+<html>
+  <head>
+  <!-- Declare Doc Type -->
+    <meta charset="UTF-8">
+     <!-- Adjust width to size of device and limit scaling-->
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+
+    <!-- Import CSS-->
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile.structure-1.3.2.css">
+    <link rel="stylesheet" href="css.css">
+
+    <!-- Import JQUERY -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <title> Dmitri's Weather/News App </title>
+
+    <!-- Get api, load scripts, get external fit text library-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script type="text/javascript" src="geojs.js"></script>
+    <script src="jquery.fittext.js"></script>
+
+    <style type="text/css"> 
+    </style>
+
+
+  </head>
+    <!-- body on-load="functionName"-->
+  <body onload="displayInfo()">
+    <!-- Top left frame displays location and time, top right frame
+    displays weather data
+
+    bottom frame contains the RSS list of local news-->
+
+    <div id="time">
+    <!-- time frame -->
+    Loading location...
+    </div>
+    
+    <div id="weather">
+    <!-- weather frame -->
+    Loading weather...
+    </div>
+
+    <div id ="news">
+    <!-- news frame -->
+    <ul>
+      <li >
+        <a id = "new1">Loading News Item #1...</a>
+      </li>
+
+      <li>
+        <a id = "new2">Loading News Item #2...</a>
+      </li>
+
+      <li>
+        <a id = "new3">Loading News Item #3...</a>
+      </li>
+
+      <li>
+        <a id = "new4">Loading News Item #4...</a>
+      </li>
+
+      <li>
+        <a id = "new5">Loading News Item #5...</a>
+      </li>
+    </ul>
+    </div>
+
+    <div id = "history">
+    <!-- history frame-->
+    Loading History...
+    <ul id = "historyhue">
+        
+    </ul>
+    </div>
+
+  </body>
+
+ </html>
